@@ -1,4 +1,4 @@
-// Exercise 1.0
+// Exercise 1.0 - done
 // ------------
 // Create an object that represents *you*.
 // It should contain your first name, last name, age and hometown.
@@ -16,12 +16,31 @@
 //     monthOfBirth: 'July'
 // }
 
+
+var mannyObject = {
+    name: {
+       first: "Manny",
+       last: "Dheer",
+    },
+    age: '23',
+    city: 'Montreal',
+    siblings: '1',
+    dateBirth: '1996',
+    occupation: 'coder',
+    pet: 'dog',
+}
+
+
+
+
 // A) console.log() your object.
+console.log(mannyObject);
 // B) console.log() a few of the values in the object.
+console.log(mannyObject.name, mannyObject.age);
 
 //-------------------------------------------------
 
-// Exercise 1.1
+// Exercise 1.1 - DONE
 // ------------
 // Add three more key/value pairs to your object that represent other attributes
 // of yourself. Ideas include (but are not limited to):
@@ -48,13 +67,18 @@
 // represent a collection of similar things?
 
 var favoriteMovie = {
+    title: "Kal ho naa ho",
+    director: "Nikkhil",
+    year: '2003',
+    country: 'India',
+    Rating: '8'
 
 }
 
 
 //-------------------------------------------------
 
-// Exercise 1.3
+// Exercise 1.3 - DONE
 // ------------
 // Fix the attempts to access values in the `person` object:
 
@@ -65,8 +89,8 @@ const person = {
     hometown: "somewhere"
 };
 
-person[age];    // => 26
-person.key;     // => "Alyssa P. Hacker"
+person.age;    // => 26
+person.name;     // => "Alyssa P. Hacker"
 
 
 //-------------------------------------------------
@@ -90,6 +114,7 @@ const alyssa = {
 
 function fullName(person) {
     // Your code here
+    return alyssa.name.first + ' ' + alyssa.name.middle + ' ' + alyssa.name.last;
 
 }
 
@@ -99,6 +124,8 @@ console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
 // ------------
 // What happens if you pass a person object to `fullName` that doesn't have a
 // middle name?
+
+// returns undefined
 
 // Your `fullName` function should work correctly regardless of whether or not
 // the person has a middle name -- if it doesn't produce the output shown above
@@ -113,8 +140,11 @@ const rick = {
     age: 66,
 };
 
+
 function betterFullName(person) {
     // Your code here
+    return rick.name.first + (rick.name.middle || ' ') + rick.name.last;
+
 
 }
 
