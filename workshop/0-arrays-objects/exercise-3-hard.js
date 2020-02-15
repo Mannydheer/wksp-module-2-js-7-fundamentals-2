@@ -10,3 +10,17 @@ const colors = ["red", "orange", "yellow", "green", "pink", "black", "gray", "bl
 
 // You must console the colors array.
 // NO for loops!
+
+
+let spectrum = [];
+
+colors.forEach(element => {
+  if (element == 'red' ||element == 'orange' ||element == 'yellow' ||element == 'green' ||element == 'green' ||element == 'blue' ||element == 'violet' || '') {
+     spectrum.push(element)
+  }
+    
+});
+
+
+
+console.log(spectrum);

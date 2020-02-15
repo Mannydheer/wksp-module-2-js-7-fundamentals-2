@@ -48,8 +48,8 @@ Object.values(countedDesserts).forEach((dessertCount, id) => {
     });
 });
 
-rankedDesserts.sort((a, b) => a.dessertCount < b.dessertCount ? 1 : -1);
 
+rankedDesserts.sort((a, b) => a.dessertCount < b.dessertCount ? 1 : -1);
 console.log('--------------------------------------------');
 console.log('A) Dessert ranked from most to least popular.');
 console.log('--------------------------------------------');
@@ -68,6 +68,20 @@ console.log('--------------------------------------------');
 console.log('B) Who chose the same dessert?');
 console.log('--------------------------------------------');
 Object.keys(countedDesserts).forEach(dessert => {
+    let names = [];
+    Object.keys(favoriteDessert).forEach(name => {
+        if (favoriteDessert[name] === dessert) names.push(name);
+    });
+    console.log(`  - ${dessert}: ${names.join(', ')}`);
+});
+console.log('--------------------------------------------');
+
+
+
+// ------------
+console.log('B) Who chose the same dessert?');
+console.log('--------------------------------------------');
+Object.keys(countDesserts).forEach(dessert => {
     let names = [];
     Object.keys(favoriteDessert).forEach(name => {
         if (favoriteDessert[name] === dessert) names.push(name);
